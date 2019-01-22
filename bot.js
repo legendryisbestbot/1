@@ -204,7 +204,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 
 client.on('ready',async () => {
   let GUILDID = '535894929977638923'; // اي دي السيرفر
-  let CHANNELID = '537378430044471297'; // اي دي الروم
+  let CHANNELID = '537384973993377792'; // اي دي الروم
   voiceStay(GUILDID, CHANNELID);
   function voiceStay(guildid, channelid) {
     if(!guildid) throw new Error('Syntax: voiceStay function requires guildid');
