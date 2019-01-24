@@ -198,43 +198,11 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 ///////////////////////////////////////////////////////
 
 client.on('ready', () => {
-   client.user.setGame("Dream Royale Community");
+   client.user.setGame("Dream Royale - 1play");
 }); 
 
-///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
-///////////////////////////////////////////////////////
-
-
-client.on('ready',async () => {
-  let GUILDID = '535894929977638923'; // اي دي السيرفر
-  let CHANNELID = '537384973993377792'; // اي دي الروم
-  voiceStay(GUILDID, CHANNELID);
-  function voiceStay(guildid, channelid) {
-    if(!guildid) throw new Error('Syntax: voiceStay function requires guildid');
-    if(!channelid) throw new Error('Syntax: voiceStay function requires channelid');
-
-    let guild = client.guilds.get(guildid);
-    let channel = guild.channels.get(channelid);
-
-    if(channel.type === 'voice') {
-      channel.join().catch(e => {
-        console.log(`Failed To Join :: ${e.message}`);
-      });
-    } else {
-      console.log(`Channel Type :: ${channel.type}, It must be Voice.`);
-    }
-  }
-});
 
 
 // THIS  MUST  BE  THIS  WAY
 
 client.login(process.env.BOT_TOKEN);//where BOT_TOKEN is the token of our bot
-
-
-
-
-
-
-
